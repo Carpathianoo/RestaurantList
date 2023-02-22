@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdPageController" customModule="ResraurantList2" customModuleProvider="target">
+            <connections>
+                <outlet property="labelContainer" destination="hSM-uU-7zu" id="wrs-ro-irs"/>
+                <outlet property="labelDaerah" destination="2tw-Y4-PfN" id="ahR-pS-uMl"/>
+                <outlet property="labelTempat" destination="KCH-pH-hki" id="ZLT-BK-zm6"/>
+                <outlet property="table3" destination="Ldm-nJ-EVX" id="Lqh-CV-Nhj"/>
+                <outlet property="view" destination="mdg-l7-upV" id="XBh-jd-f46"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mdg-l7-upV">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ldm-nJ-EVX">
+                    <rect key="frame" x="0.0" y="212" width="390" height="623"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSM-uU-7zu">
+                    <rect key="frame" x="15.999999999999996" y="74" width="53.666666666666657" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Raval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-Y4-PfN">
+                            <rect key="frame" x="6" y="2" width="40.666666666666664" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstItem="2tw-Y4-PfN" firstAttribute="top" secondItem="hSM-uU-7zu" secondAttribute="top" constant="2" id="1PX-5l-Cjh"/>
+                        <constraint firstAttribute="trailing" secondItem="2tw-Y4-PfN" secondAttribute="trailing" constant="7" id="Fgo-Qe-QAC"/>
+                        <constraint firstItem="2tw-Y4-PfN" firstAttribute="leading" secondItem="hSM-uU-7zu" secondAttribute="leading" constant="6" id="I2f-T2-JsO"/>
+                        <constraint firstAttribute="bottom" secondItem="2tw-Y4-PfN" secondAttribute="bottom" constant="1" id="oa8-pe-LcP"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="La Gringa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCH-pH-hki">
+                    <rect key="frame" x="16" y="131.66666666666666" width="132.66666666666666" height="38.333333333333343"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="pKL-A5-zTi"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="KCH-pH-hki" firstAttribute="leading" secondItem="pKL-A5-zTi" secondAttribute="leading" constant="16" id="105-xD-JhO"/>
+                <constraint firstItem="hSM-uU-7zu" firstAttribute="top" secondItem="pKL-A5-zTi" secondAttribute="top" constant="27" id="5el-Ch-pwP"/>
+                <constraint firstItem="KCH-pH-hki" firstAttribute="top" secondItem="hSM-uU-7zu" secondAttribute="bottom" constant="33.670000000000002" id="OF1-Tg-Kn5"/>
+                <constraint firstAttribute="bottom" secondItem="Ldm-nJ-EVX" secondAttribute="bottom" constant="9" id="X1A-k7-2bn"/>
+                <constraint firstItem="hSM-uU-7zu" firstAttribute="leading" secondItem="pKL-A5-zTi" secondAttribute="leading" constant="16" id="g04-vQ-jkG"/>
+                <constraint firstItem="Ldm-nJ-EVX" firstAttribute="leading" secondItem="pKL-A5-zTi" secondAttribute="leading" id="qg5-KL-Een"/>
+                <constraint firstItem="Ldm-nJ-EVX" firstAttribute="top" secondItem="KCH-pH-hki" secondAttribute="bottom" constant="42" id="vwB-SF-qng"/>
+                <constraint firstItem="Ldm-nJ-EVX" firstAttribute="trailing" secondItem="pKL-A5-zTi" secondAttribute="trailing" id="web-rp-Xme"/>
+            </constraints>
+            <point key="canvasLocation" x="130.76923076923077" y="-12.085308056872037"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
