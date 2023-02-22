@@ -22,6 +22,7 @@ class FirstTableCell: UITableViewCell {
     var containerView: UIView = {
         let vw = UIView()
         vw.backgroundColor = .systemOrange
+        vw.layer.cornerRadius = 6
         return vw
     }()
     
@@ -54,16 +55,6 @@ class FirstTableCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-//    func setupContainerView() {
-//
-//        containerView.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            containerView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
-//            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0)
-//        ])
-//
-//    }
     
     func setupRestaurantIconImage() {
         
@@ -72,8 +63,8 @@ class FirstTableCell: UITableViewCell {
             restaurantIcon.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             restaurantIcon.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
             restaurantIcon.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            restaurantIcon.heightAnchor.constraint(equalToConstant: 15),
-            restaurantIcon.widthAnchor.constraint(equalToConstant: 15)
+            restaurantIcon.heightAnchor.constraint(equalToConstant: 20),
+            restaurantIcon.widthAnchor.constraint(equalToConstant: 20)
         ])
         
     }

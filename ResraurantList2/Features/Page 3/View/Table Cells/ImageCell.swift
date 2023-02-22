@@ -14,6 +14,7 @@ class ImageCell: UITableViewCell {
     var imageTempat: UIImageView = {
         let img = UIImageView()
         img.image = UIImage(named: "Kebab")
+        img.contentMode = .scaleAspectFill
         return img
     }()
     
@@ -31,13 +32,12 @@ class ImageCell: UITableViewCell {
     func setupImageTempat() {
         imageTempat.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageTempat.topAnchor.constraint(equalTo: self.topAnchor),
-            imageTempat.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            imageTempat.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            imageTempat.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             imageTempat.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-//            imageTempat.leadingAnchor.constraint(equalTo: imageTempat.leadingAnchor, constant: 0),
-//            imageTempat.trailingAnchor.constraint(equalTo: imageTempat.trailingAnchor, constant: -0),
+            imageTempat.leadingAnchor.constraint(equalTo: backgroundView?.leadingAnchor ?? self.leadingAnchor),
+            imageTempat.trailingAnchor.constraint(equalTo: backgroundView?.trailingAnchor ?? self.trailingAnchor),
             imageTempat.heightAnchor.constraint(equalToConstant: 274),
-            imageTempat.widthAnchor.constraint(equalToConstant: 375)
         ])
     }
     

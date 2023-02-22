@@ -9,13 +9,14 @@ import UIKit
 
 enum Sections: Int {
     
-    case address = 0
-    case time = 1
-    case image = 2
-    case orderTitle = 3
-    case order = 4
-    case aboutTitle = 5
-    case about = 6
+    case header = 0
+    case address = 1
+    case time = 2
+    case image = 3
+    case orderTitle = 4
+    case order = 5
+    case aboutTitle = 6
+    case about = 7
     
 }
 
@@ -39,6 +40,7 @@ class ThirdPageController: UIViewController {
         setupTable()
     }
     func setupTable() {
+        table3.register(TopCell.self, forCellReuseIdentifier: TopCell.identifier)
         table3.register(AddressCell.self, forCellReuseIdentifier: AddressCell.identifier)
         table3.register(TimeCell.self, forCellReuseIdentifier: TimeCell.identifier)
         table3.register(OrderCell.self, forCellReuseIdentifier: OrderCell.identifier)
@@ -48,6 +50,9 @@ class ThirdPageController: UIViewController {
         table3.register(ImageCell.self, forCellReuseIdentifier: ImageCell.identifier)
         table3.delegate = self
         table3.dataSource = self
+        
+        table3.separatorStyle = .none
+        table3.allowsSelection = false
         
     }
 
@@ -65,6 +70,14 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
         print("index section: --------------- \(indexPath.section)")
 
         switch Section {
+        case .header:
+            guard let cell = table3.dequeueReusableCell(withIdentifier: TopCell.identifier, for: indexPath) as? TopCell else {
+                return UITableViewCell()
+            }
+            
+            cell.setupTopTableCell()
+            
+            return cell
         case .address:
             guard let cell = table3.dequeueReusableCell(withIdentifier: AddressCell.identifier, for: indexPath) as? AddressCell else {
                 return UITableViewCell()
@@ -140,7 +153,7 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
 //    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        7
+        8
     }
     
 }

@@ -27,6 +27,7 @@ class SecondTableCell: UITableViewCell {
     var namaRestoranLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "nama restoran"
+        lbl.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         return lbl
     }()
     
@@ -38,7 +39,8 @@ class SecondTableCell: UITableViewCell {
     
     var hargaLabel: UILabel = {
         let lbl = UILabel()
-        lbl.text = "Best nachos in town"
+        lbl.text = "€15/person"
+        lbl.textColor = .systemBlue
         return lbl
     }()
     
@@ -78,7 +80,7 @@ class SecondTableCell: UITableViewCell {
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            self.descriptionLabel.topAnchor.constraint(equalTo: namaRestoranLabel.bottomAnchor, constant: 10),
+            self.descriptionLabel.topAnchor.constraint(equalTo: namaRestoranLabel.bottomAnchor, constant: 5),
             self.descriptionLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
         ])

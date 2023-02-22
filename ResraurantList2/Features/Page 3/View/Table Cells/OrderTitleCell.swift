@@ -14,6 +14,8 @@ class OrderTitleCell: UITableViewCell {
     var orderTitle: UILabel = {
         let lb = UILabel()
         lb.text = "Order"
+        lb.textColor = .systemBlue
+        lb.font = UIFont.systemFont(ofSize: 18)
         return lb
     }()
     
@@ -21,11 +23,9 @@ class OrderTitleCell: UITableViewCell {
         orderTitle.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            self.orderTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
-            self.orderTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            
-            
-            
+            self.orderTitle.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.orderTitle.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+            self.orderTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
         ])
     }
     

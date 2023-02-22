@@ -27,7 +27,8 @@ class OrderCell: UITableViewCell {
         orderLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.orderLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
-            self.orderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 4)
+            self.orderLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
+            self.orderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15)
         ])
     }
     
@@ -35,7 +36,8 @@ class OrderCell: UITableViewCell {
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.priceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
-            self.priceLabel.leadingAnchor.constraint(equalTo: orderLabel.trailingAnchor, constant: 10)
+            self.priceLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
+            self.priceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -45)
         ])
     }
     

@@ -31,10 +31,9 @@ class TimeCell: UITableViewCell {
     func setupTimeLabel() {
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.timeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            self.timeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            self.timeLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -5),
-            self.timeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            self.timeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.timeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
+            self.timeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
         ])
     }
     
