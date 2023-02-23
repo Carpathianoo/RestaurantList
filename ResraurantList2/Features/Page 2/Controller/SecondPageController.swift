@@ -10,6 +10,7 @@ import UIKit
 class SecondPageController: UIViewController {
 
     var restaurantList: [RestaurantModel] = []
+    var pageTitle: String = ""
     
     @IBOutlet weak var table2: UITableView!
     
@@ -17,7 +18,6 @@ class SecondPageController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        title = ""
         navigationItem.largeTitleDisplayMode = .never
         self.view.backgroundColor = UIColor(named: "ThemeColor")
         
@@ -70,7 +70,7 @@ extension SecondPageController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Latino"
+        return pageTitle
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {

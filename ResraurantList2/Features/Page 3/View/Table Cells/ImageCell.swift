@@ -33,8 +33,8 @@ class ImageCell: UITableViewCell {
     func setupImageTempat() {
         imageTempat.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageTempat.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-            imageTempat.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            imageTempat.topAnchor.constraint(equalTo: self.topAnchor),
+            imageTempat.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             imageTempat.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imageTempat.leadingAnchor.constraint(equalTo: backgroundView?.leadingAnchor ?? self.leadingAnchor),
             imageTempat.trailingAnchor.constraint(equalTo: backgroundView?.trailingAnchor ?? self.trailingAnchor),

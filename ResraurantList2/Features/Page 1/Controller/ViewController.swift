@@ -36,9 +36,10 @@ class ViewController: UIViewController {
         print("Button clicked")
     }
     
-    func moveToSecondPage(restaurant: [RestaurantModel]) {
+    func moveToSecondPage(restaurant: [RestaurantModel], title: String) {
         let vc = SecondPageController()
         vc.restaurantList = restaurant
+        vc.pageTitle = title
         self.navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -67,7 +68,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        moveToSecondPage(restaurant: RestaurantData[indexPath.row].restaurant)
+        moveToSecondPage(restaurant: RestaurantData[indexPath.row].restaurant, title: RestaurantData[indexPath.row].cuisineStyle)
     }
     
 }
