@@ -13,6 +13,7 @@ class AboutCell: UITableViewCell {
 
     var aboutLabel: UILabel = {
         let lbl = UILabel()
+        lbl.textColor = UIColor(named: "textColor")
         lbl.numberOfLines = 0
         lbl.text = "Gringa started life out as a Food truck, one of the first in Barcelona, a blue Citroen called Eureka Street Food. Run by Priscilla, a native Californian, and Gascon. After five years, they acquired a new partner, Juan and found their location in the Raval.  A barrio in flux with many faces: principally a migrant neighborhood, with investment funds buying up entire buildings and leaving them empty – useful for ‘drug flats’. Things are changing, Barcelona is booming and El Raval and its attractive rents are becoming a real contender."
         return lbl

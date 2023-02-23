@@ -14,6 +14,8 @@ class TimeCell: UITableViewCell {
     var timeLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "12 Desember 3021"
+        lbl.textColor = UIColor(named: "textColor")
+
         return lbl
     }()
     

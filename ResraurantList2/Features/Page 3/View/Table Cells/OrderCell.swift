@@ -14,12 +14,16 @@ class OrderCell: UITableViewCell {
     var orderLabel: UILabel = {
         let lb = UILabel()
         lb.text = "The Fried Chicken Bun"
+        lb.textColor = UIColor(named: "textColor")
+
         return lb
     }()
     
     var priceLabel: UILabel = {
         let lb = UILabel()
         lb.text = "$12"
+        lb.textColor = UIColor(named: "textColor")
+
         return lb
     }()
     

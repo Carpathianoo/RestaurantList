@@ -13,6 +13,8 @@ class AddressCell: UITableViewCell {
     var addressLabel: UILabel = {
         let lb = UILabel()
         lb.text = "This is the address"
+        lb.textColor = UIColor(named: "textColor")
+
         return lb
     }()
 

@@ -27,13 +27,17 @@ class SecondTableCell: UITableViewCell {
     var namaRestoranLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "nama restoran"
-        lbl.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        lbl.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        lbl.textColor = UIColor(named: "textColor")
+
         return lbl
     }()
     
     var descriptionLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "lorem ipsum dolor sit amet"
+        lbl.textColor = UIColor(named: "textColor")
+
         return lbl
     }()
     

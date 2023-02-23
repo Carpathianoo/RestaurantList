@@ -27,7 +27,9 @@ class TopCell: UITableViewCell {
     
     var locationLabel: UILabel = {
         let lbl = UILabel()
-        lbl.text = "Ravalawjkdhkawdaw"
+        lbl.text = "Rumah Saya"
+        lbl.textColor = UIColor(named: "textColor")
+
         return lbl
     }()
     
@@ -54,7 +56,7 @@ class TopCell: UITableViewCell {
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            containerView.heightAnchor.constraint(equalToConstant: 50)
+            containerView.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     

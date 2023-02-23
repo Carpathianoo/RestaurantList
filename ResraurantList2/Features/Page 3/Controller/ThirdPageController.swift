@@ -25,15 +25,9 @@ enum Sections: Int {
 class ThirdPageController: UIViewController {
 
     @IBOutlet weak var labelContainer: UIView!
-    
     @IBOutlet weak var labelDaerah: UILabel!
-    
     @IBOutlet weak var labelTempat: UILabel!
-    
     @IBOutlet weak var table3: UITableView!
-    
-    var arrayOrder = ["Ayam Goreng", "Nasi Bakar", "Ketoprak", "Gado-gado"]
-    var arrayHarga = ["12", "22", "11", "32"]
     
     var detailData: RestaurantModel?
     var timeList: [Time] = []

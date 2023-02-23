@@ -19,6 +19,14 @@ class OrderTitleCell: UITableViewCell {
         return lb
     }()
     
+    var lbl: UILabel = {
+        let lb = UILabel()
+        lb.text = "Order"
+        lb.textColor = .systemBlue
+        lb.font = UIFont.systemFont(ofSize: 18)
+        return lb
+    }()
+    
     func setupOrderTitle() {
         orderTitle.translatesAutoresizingMaskIntoConstraints = false
         

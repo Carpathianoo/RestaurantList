@@ -29,6 +29,7 @@ class FirstTableCell: UITableViewCell {
     var styleLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "Test"
+        lbl.textColor = UIColor(named: "textColor")
         return lbl
     }()
     
@@ -40,6 +41,7 @@ class FirstTableCell: UITableViewCell {
     
     var restaurantCountLabel: UILabel = {
         let lbl = UILabel()
+        lbl.textColor = UIColor(named: "textColor")
         return lbl
     }()
     
