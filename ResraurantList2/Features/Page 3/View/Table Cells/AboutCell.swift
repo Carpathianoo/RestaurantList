@@ -43,6 +43,8 @@ class AboutCell: UITableViewCell {
     func setupAboutTableCell() {
         registerView()
         setupAboutLabel()
+        self.backgroundColor = UIColor(named: "ThemeColor")
+
     }
     
     func registerView() {

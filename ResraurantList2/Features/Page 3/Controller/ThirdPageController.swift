@@ -32,11 +32,20 @@ class ThirdPageController: UIViewController {
     
     @IBOutlet weak var table3: UITableView!
     
+    var arrayOrder = ["Ayam Goreng", "Nasi Bakar", "Ketoprak", "Gado-gado"]
+    var arrayHarga = ["12", "22", "11", "32"]
+    
+    var detailData: RestaurantModel?
+    var timeList: [Time] = []
+    var orderList: [Order] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
+        self.view.backgroundColor = UIColor(named: "ThemeColor")
+
         setupTable()
     }
     func setupTable() {
@@ -54,13 +63,22 @@ class ThirdPageController: UIViewController {
         table3.separatorStyle = .none
         table3.allowsSelection = false
         
+        table3.backgroundColor = UIColor(named: "ThemeColor")
+
+        
     }
 
 }
 
 extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        if section == 2 {
+            return timeList.count
+        } else if section == 5 {
+            return orderList.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,6 +94,7 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
             }
             
             cell.setupTopTableCell()
+            cell.restaurantLabel.text = detailData?.title
             
             return cell
         case .address:
@@ -84,6 +103,7 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
             }
             
             cell.setupAddressTableCell()
+            cell.addressLabel.text = detailData?.address
             
             return cell
             
@@ -93,6 +113,7 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
             }
             
             cell.setupTimeTableCell()
+            cell.timeLabel.text = timeList[indexPath.row].available
             
             return cell
             
@@ -102,6 +123,7 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
             }
             
             cell.setupImageTableCell()
+            cell.imageTempat.image = UIImage(named: detailData?.image ?? "Kebab")
             
             return cell
             
@@ -120,6 +142,8 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
             }
             
             cell.setupOrderTableCell()
+            cell.orderLabel.text = orderList[indexPath.row].name
+            cell.priceLabel.text = "$\(orderList[indexPath.row].price)"
             
             return cell
 
@@ -131,14 +155,14 @@ extension ThirdPageController: UITableViewDataSource, UITableViewDelegate {
             cell.setupAboutTitleTableCell()
             
             return cell
-
-            
         case .about:
             guard let cell = table3.dequeueReusableCell(withIdentifier: AboutCell.identifier, for: indexPath) as? AboutCell else {
                 return UITableViewCell()
             }
             
             cell.setupAboutTableCell()
+            cell.aboutLabel.text = detailData?.about
+
             
             return cell
             

@@ -31,9 +31,9 @@ class TimeCell: UITableViewCell {
     func setupTimeLabel() {
         timeLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            self.timeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
+            self.timeLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
             self.timeLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            self.timeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
+            self.timeLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
         ])
     }
     
@@ -41,6 +41,8 @@ class TimeCell: UITableViewCell {
         registerView()
         
         setupTimeLabel()
+        self.backgroundColor = UIColor(named: "ThemeColor")
+
     }
     
     func registerView() {

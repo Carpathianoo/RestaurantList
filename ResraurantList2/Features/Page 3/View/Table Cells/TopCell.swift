@@ -18,6 +18,13 @@ class TopCell: UITableViewCell {
         return vw
     }()
     
+    var mapIcon: UIImageView = {
+        let img = UIImageView()
+        img.image = UIImage(systemName: "location.circle.fill")
+        img.tintColor = .black
+        return img
+    }()
+    
     var locationLabel: UILabel = {
         let lbl = UILabel()
         lbl.text = "Ravalawjkdhkawdaw"
@@ -51,11 +58,21 @@ class TopCell: UITableViewCell {
         ])
     }
     
+    func setupMapIcon() {
+        mapIcon.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            mapIcon.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
+            mapIcon.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
+            mapIcon.trailingAnchor.constraint(equalTo: locationLabel.leadingAnchor, constant: -8)
+        ])
+        
+        
+    }
+    
     func setupLocationLabel() {
         locationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             locationLabel.centerYAnchor.constraint(equalTo: containerView.centerYAnchor),
-            locationLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
             locationLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10)
         ])
     }
@@ -72,13 +89,17 @@ class TopCell: UITableViewCell {
         registerView()
         
         setupContainerView()
+        setupMapIcon()
         setupLocationLabel()
         setupRestaurantLabel()
+        self.backgroundColor = UIColor(named: "ThemeColor")
+
     }
     
     func registerView() {
         self.addSubview(containerView)
         self.containerView.addSubview(locationLabel)
+        self.containerView.addSubview(mapIcon)
         self.addSubview(restaurantLabel)
     }
     

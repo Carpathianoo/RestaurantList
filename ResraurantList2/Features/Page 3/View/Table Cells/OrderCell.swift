@@ -37,7 +37,7 @@ class OrderCell: UITableViewCell {
         NSLayoutConstraint.activate([
             self.priceLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 4),
             self.priceLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -4),
-            self.priceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -45)
+            self.priceLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -60)
         ])
     }
     
@@ -56,6 +56,8 @@ class OrderCell: UITableViewCell {
         registerView()
         setupOrderLabel()
         setupPriceLabel()
+        self.backgroundColor = UIColor(named: "ThemeColor")
+
     }
     
     func registerView() {

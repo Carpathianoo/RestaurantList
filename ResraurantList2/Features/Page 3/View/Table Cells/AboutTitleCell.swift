@@ -42,7 +42,8 @@ class AboutTitleCell: UITableViewCell {
     func setupAboutTitleTableCell() {
         registerView()
         setupAboutTitle()
-        
+        self.backgroundColor = UIColor(named: "ThemeColor")
+
     }
     
     func registerView() {
@@ -50,3 +51,4 @@ class AboutTitleCell: UITableViewCell {
     }
     
 }
+

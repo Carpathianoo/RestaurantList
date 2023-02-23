@@ -21,7 +21,7 @@ class FirstTableCell: UITableViewCell {
     
     var containerView: UIView = {
         let vw = UIView()
-        vw.backgroundColor = .systemOrange
+        vw.backgroundColor = .systemYellow
         vw.layer.cornerRadius = 6
         return vw
     }()
@@ -87,7 +87,6 @@ class FirstTableCell: UITableViewCell {
             containerView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -15),
-            containerView.heightAnchor.constraint(equalToConstant: 100),
             containerView.widthAnchor.constraint(equalToConstant: 100)
         ])
         
@@ -115,6 +114,7 @@ extension FirstTableCell: FirstTableCellProtocol {
     func setupTableCell() {
         registerComponent()
         self.backgroundColor = UIColor(named: "ThemeColor")
+        selectionStyle = .none
         
         setupStyleLabel()
         setupRestaurantIconImage()

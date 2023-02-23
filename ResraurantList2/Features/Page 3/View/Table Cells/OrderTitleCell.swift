@@ -43,6 +43,8 @@ class OrderTitleCell: UITableViewCell {
     func setupOrderTitleTableCell() {
         registerView()
         setupOrderTitle()
+        self.backgroundColor = UIColor(named: "ThemeColor")
+
     }
     
     func registerView() {

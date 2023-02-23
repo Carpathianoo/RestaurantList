@@ -15,6 +15,7 @@ class ImageCell: UITableViewCell {
         let img = UIImageView()
         img.image = UIImage(named: "Kebab")
         img.contentMode = .scaleAspectFill
+        img.backgroundColor = UIColor(named: "ThemeColor")
         return img
     }()
     
@@ -32,7 +33,7 @@ class ImageCell: UITableViewCell {
     func setupImageTempat() {
         imageTempat.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageTempat.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
+            imageTempat.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
             imageTempat.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             imageTempat.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             imageTempat.leadingAnchor.constraint(equalTo: backgroundView?.leadingAnchor ?? self.leadingAnchor),

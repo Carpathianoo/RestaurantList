@@ -32,7 +32,7 @@ class AddressCell: UITableViewCell {
         NSLayoutConstraint.activate([
             self.addressLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
             self.addressLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            self.addressLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
+            self.addressLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20),
             
         ])
     }
@@ -41,7 +41,8 @@ class AddressCell: UITableViewCell {
         registerView()
         
         setupAddressLabel()
-//        setupContainer()
+        self.backgroundColor = UIColor(named: "ThemeColor")
+
     }
     
     func registerView() {
